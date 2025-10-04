@@ -173,13 +173,13 @@ const CreativaLanding = () => {
         <div className="absolute inset-0 bg-black/60 dark:bg-black/40" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in">
               Visual yang Berbicara.
             </h1>
-            <h2 className="text-3xl md:text-5xl font-light text-gray-600 dark:text-gray-300 mb-8 animate-slide-up">
+            <h2 className="text-3xl md:text-5xl font-light text-gray-200 mb-8 animate-slide-up">
               Cerita yang Bertahan.
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in-delayed">
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto animate-fade-in-delayed">
               Kami menciptakan konten visual yang memukau melalui fotografi, videografi, dan editing video yang profesional.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
