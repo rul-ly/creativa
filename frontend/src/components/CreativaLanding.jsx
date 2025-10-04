@@ -271,6 +271,9 @@ const CreativaLanding = () => {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+
       {/* Portfolio Section */}
       <section id="portofolio" className="py-24 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
