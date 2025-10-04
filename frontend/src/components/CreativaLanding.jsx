@@ -242,8 +242,11 @@ const CreativaLanding = () => {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+
       {/* Showreel Section */}
-      <section id="showreel" className="py-24">
+      <section id="showreel" className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Showreel</h2>
