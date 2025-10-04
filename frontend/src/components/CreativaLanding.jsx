@@ -370,14 +370,8 @@ const CreativaLanding = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="kontak" className="py-24 bg-gray-50 dark:bg-gray-800 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5 dark:opacity-10"
-          style={{ 
-            backgroundImage: `url('https://images.unsplash.com/photo-1516961642265-531546e84af2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxwaG90b2dyYXBoeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODZ8MA&ixlib=rb-4.1.0&q=85')` 
-          }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="kontak" className="py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Hubungi Kami</h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">Mari wujudkan proyek kreatif Anda bersama kami</p>
