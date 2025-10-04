@@ -355,49 +355,94 @@ const CreativaLanding = () => {
             <TabsContent value={activeFilter} className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredPortfolio.map((item) => (
-                  <Dialog key={item.id}>
-                    <DialogTrigger asChild>
-                      <Card className="cursor-pointer overflow-hidden bg-white dark:bg-gray-900 border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-                        <div className="relative aspect-square overflow-hidden">
-                          <img
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-                          />
-                          <div className="absolute inset-0 bg-black/0 hover:bg-black/30 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
-                            <Badge variant="secondary" className="bg-white/20 text-white backdrop-blur-sm">
-                              {item.category === 'photography' ? 'Fotografi' : 
-                               item.category === 'videography' ? 'Videografi' : 'Editing'}
-                            </Badge>
-                          </div>
-                        </div>
-                        <CardContent className="p-6">
-                          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
-                          <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
-                        </CardContent>
-                      </Card>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-0 shadow-none">
-                      <div className="relative">
-                        <img
-                          src={item.image}
-                          alt={item.title}
-                          className="w-full h-auto rounded-lg shadow-2xl"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-6 rounded-b-lg backdrop-blur-sm">
-                          <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                          <p className="text-gray-300">{item.description}</p>
-                          <Badge variant="secondary" className="mt-3 bg-white/20 text-white">
-                            {item.category === 'photography' ? 'Fotografi' : 
-                             item.category === 'videography' ? 'Videografi' : 'Editing'}
-                          </Badge>
-                        </div>
+                  <Card 
+                    key={item.id}
+                    className="cursor-pointer overflow-hidden bg-white dark:bg-gray-900 border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    onClick={() => openModal(item)}
+                  >
+                    <div className="relative aspect-square overflow-hidden">
+                      <img
+                        src={item.category === 'photography' && item.images 
+                          ? item.images[carouselIndexes[item.id] || 0]
+                          : item.image || item.images?.[0]
+                        }
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-black/0 hover:bg-black/30 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
+                        <Badge variant="secondary" className="bg-white/20 text-white backdrop-blur-sm">
+                          {item.category === 'photography' ? 'Fotografi' : 
+                           item.category === 'videography' ? 'Videografi' : 'Editing'}
+                        </Badge>
                       </div>
-                    </DialogContent>
-                  </Dialog>
+                      {item.category === 'photography' && item.images && item.images.length > 1 && (
+                        <div className="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded backdrop-blur-sm">
+                          {((carouselIndexes[item.id] || 0) + 1)} / {item.images.length}
+                        </div>
+                      )}
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{item.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-400">{item.description}</p>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
             </TabsContent>
+
+            {/* Custom Modal for Portfolio */}
+            {selectedPortfolioItem && (
+              <Dialog open={!!selectedPortfolioItem} onOpenChange={() => setSelectedPortfolioItem(null)}>
+                <DialogContent className="max-w-4xl w-full p-0 bg-transparent border-0 shadow-none">
+                  <div className="relative">
+                    <img
+                      src={selectedPortfolioItem.images 
+                        ? selectedPortfolioItem.images[selectedImageIndex]
+                        : selectedPortfolioItem.image
+                      }
+                      alt={selectedPortfolioItem.title}
+                      className="w-full h-auto rounded-lg shadow-2xl"
+                    />
+                    
+                    {/* Navigation buttons for photography items with multiple images */}
+                    {selectedPortfolioItem.category === 'photography' && selectedPortfolioItem.images && selectedPortfolioItem.images.length > 1 && (
+                      <>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 border-white/30 text-white hover:bg-black/70 p-3"
+                          onClick={prevImage}
+                        >
+                          <ChevronLeft className="h-6 w-6" />
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 border-white/30 text-white hover:bg-black/70 p-3"
+                          onClick={nextImage}
+                        >
+                          <ChevronRight className="h-6 w-6" />
+                        </Button>
+                        
+                        {/* Image counter */}
+                        <div className="absolute top-4 right-4 bg-black/50 text-white text-sm px-3 py-1 rounded backdrop-blur-sm">
+                          {selectedImageIndex + 1} / {selectedPortfolioItem.images.length}
+                        </div>
+                      </>
+                    )}
+                    
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-6 rounded-b-lg backdrop-blur-sm">
+                      <h3 className="text-2xl font-bold mb-2">{selectedPortfolioItem.title}</h3>
+                      <p className="text-gray-300">{selectedPortfolioItem.description}</p>
+                      <Badge variant="secondary" className="mt-3 bg-white/20 text-white">
+                        {selectedPortfolioItem.category === 'photography' ? 'Fotografi' : 
+                         selectedPortfolioItem.category === 'videography' ? 'Videografi' : 'Editing'}
+                      </Badge>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            )}
           </Tabs>
         </div>
       </section>
