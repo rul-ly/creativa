@@ -185,14 +185,14 @@ const CreativaLanding = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={() => scrollToSection('portofolio')}
-                className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 px-8 py-3 text-lg"
+                className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 text-lg shadow-lg"
               >
                 Lihat Karya Kami
               </Button>
               <Button 
                 variant="outline"
                 onClick={() => scrollToSection('kontak')}
-                className="border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 px-8 py-3 text-lg"
+                className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-lg"
               >
                 Hubungi Kami
               </Button>
