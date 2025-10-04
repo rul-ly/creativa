@@ -37,33 +37,6 @@ const CreativaLanding = () => {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [carouselIndexes, setCarouselIndexes] = useState({});
 
-  // Toggle dark mode
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
-
-  // Auto carousel for photography items
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCarouselIndexes(prev => {
-        const newIndexes = { ...prev };
-        portfolioItems.forEach(item => {
-          if (item.category === 'photography' && item.images) {
-            const currentIndex = newIndexes[item.id] || 0;
-            newIndexes[item.id] = (currentIndex + 1) % item.images.length;
-          }
-        });
-        return newIndexes;
-      });
-    }, 3000); // Change image every 3 seconds
-
-    return () => clearInterval(interval);
-  }, [portfolioItems]);
-
   // Mock portfolio data
   const portfolioItems = [
     {
