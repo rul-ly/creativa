@@ -355,9 +355,17 @@ const CreativaLanding = () => {
       {/* About Section */}
       <section id="tentang" className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Tentang Creativa</h2>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="flex justify-center">
+              <div className="w-48 h-48 bg-gray-900 dark:bg-white rounded-2xl flex items-center justify-center shadow-2xl">
+                <h1 className="text-4xl font-bold text-white dark:text-gray-900">Creativa</h1>
+              </div>
+            </div>
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Tentang Creativa</h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                 Creativa adalah agensi kreatif yang berdedikasi menciptakan konten visual yang bermakna dan berdampak. 
                 Dengan pengalaman bertahun-tahun di industri kreatif, kami memahami betapa pentingnya visual yang kuat 
@@ -368,15 +376,6 @@ const CreativaLanding = () => {
                 visi kreatif Anda menjadi kenyataan. Dari konsep hingga eksekusi, kami berkomitmen memberikan hasil 
                 terbaik yang melampaui ekspektasi.
               </p>
-            </div>
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGFnZW5jeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODB8MA&ixlib=rb-4.1.0&q=85"
-                  alt="Tentang Creativa"
-                  className="w-full h-full object-cover"
-                />
-              </div>
             </div>
           </div>
         </div>
