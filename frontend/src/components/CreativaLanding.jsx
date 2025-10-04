@@ -349,8 +349,11 @@ const CreativaLanding = () => {
         </div>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-gray-300 dark:via-gray-600 to-transparent"></div>
+
       {/* About Section */}
-      <section id="tentang" className="py-24">
+      <section id="tentang" className="py-24 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
