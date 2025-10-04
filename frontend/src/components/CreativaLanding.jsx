@@ -24,7 +24,9 @@ import {
   Phone,
   MapPin,
   ChevronDown,
-  Filter
+  Filter,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 
 const CreativaLanding = () => {
