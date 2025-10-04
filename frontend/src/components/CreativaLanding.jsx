@@ -165,8 +165,12 @@ const CreativaLanding = () => {
       {/* Hero Section */}
       <section id="beranda" className="pt-16 min-h-screen flex items-center relative overflow-hidden">
         <div 
-          className="absolute inset-0 bg-black dark:bg-white opacity-5 dark:opacity-10"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url('https://images.unsplash.com/photo-1703102411374-5fe3e0e4b2bc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMHN0b3J5dGVsbGluZ3xlbnwwfHx8fDE3NTk1OTQ3NjJ8MA&ixlib=rb-4.1.0&q=85')` 
+          }}
         />
+        <div className="absolute inset-0 bg-black/60 dark:bg-black/40" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in">
