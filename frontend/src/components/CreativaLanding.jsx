@@ -340,14 +340,8 @@ const CreativaLanding = () => {
       </section>
 
       {/* About Section */}
-      <section id="tentang" className="py-24 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5 dark:opacity-10"
-          style={{ 
-            backgroundImage: `url('https://images.unsplash.com/photo-1715510343533-894154124844?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxjcmVhdGl2ZSUyMGFnZW5jeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODB8MA&ixlib=rb-4.1.0&q=85')` 
-          }}
-        />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="tentang" className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Tentang Creativa</h2>
