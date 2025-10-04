@@ -32,6 +32,8 @@ const CreativaLanding = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeFilter, setActiveFilter] = useState('all');
   const [selectedPortfolioItem, setSelectedPortfolioItem] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [carouselIndexes, setCarouselIndexes] = useState({});
 
   // Toggle dark mode
   useEffect(() => {
