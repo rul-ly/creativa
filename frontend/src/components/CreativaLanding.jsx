@@ -239,14 +239,8 @@ const CreativaLanding = () => {
       </section>
 
       {/* Showreel Section */}
-      <section id="showreel" className="py-24 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5 dark:opacity-10"
-          style={{ 
-            backgroundImage: `url('https://images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGFnZW5jeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODB8MA&ixlib=rb-4.1.0&q=85')` 
-          }}
-        />
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="showreel" className="py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Showreel</h2>
             <p className="text-xl text-gray-600 dark:text-gray-400">Lihat highlight karya terbaik kami</p>
