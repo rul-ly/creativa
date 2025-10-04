@@ -361,8 +361,8 @@ const CreativaLanding = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="flex justify-center">
-              <div className="w-48 h-48 bg-gray-900 dark:bg-white rounded-2xl flex items-center justify-center shadow-2xl">
-                <h1 className="text-4xl font-bold text-white dark:text-gray-900">Creativa</h1>
+              <div className="w-48 h-48 bg-transparent rounded-2xl flex items-center justify-center">
+                <h1 className="text-4xl font-bold text-gray-900 dark:text-white">Creativa</h1>
               </div>
             </div>
             <div>
