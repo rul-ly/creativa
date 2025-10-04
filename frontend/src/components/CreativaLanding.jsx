@@ -130,6 +130,28 @@ const CreativaLanding = () => {
     setMobileMenuOpen(false);
   };
 
+  // Modal navigation functions
+  const openModal = (item) => {
+    setSelectedPortfolioItem(item);
+    setSelectedImageIndex(0);
+  };
+
+  const nextImage = () => {
+    if (selectedPortfolioItem && selectedPortfolioItem.images) {
+      setSelectedImageIndex(prev => 
+        (prev + 1) % selectedPortfolioItem.images.length
+      );
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedPortfolioItem && selectedPortfolioItem.images) {
+      setSelectedImageIndex(prev => 
+        prev === 0 ? selectedPortfolioItem.images.length - 1 : prev - 1
+      );
+    }
+  };
+
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'dark bg-gray-900' : 'bg-white'}`}>
       {/* Header */}
