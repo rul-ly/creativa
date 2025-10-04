@@ -48,7 +48,12 @@ const CreativaLanding = () => {
       id: 1,
       category: 'photography',
       title: 'Portrait Session',
-      image: 'https://images.unsplash.com/photo-1516961642265-531546e84af2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxwaG90b2dyYXBoeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODZ8MA&ixlib=rb-4.1.0&q=85',
+      images: [
+        'https://images.unsplash.com/photo-1516961642265-531546e84af2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxwaG90b2dyYXBoeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODZ8MA&ixlib=rb-4.1.0&q=85',
+        'https://images.unsplash.com/photo-1495121553079-4c61bcce1894?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxwaG90b2dyYXBoeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODZ8MA&ixlib=rb-4.1.0&q=85',
+        'https://images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGFnZW5jeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODB8MA&ixlib=rb-4.1.0&q=85',
+        'https://images.unsplash.com/photo-1715510343533-894154124844?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwyfHxjcmVhdGl2ZSUyMGFnZW5jeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODB8MA&ixlib=rb-4.1.0&q=85'
+      ],
       description: 'Professional portrait photography with natural lighting'
     },
     {
@@ -69,7 +74,11 @@ const CreativaLanding = () => {
       id: 4,
       category: 'photography',
       title: 'Event Documentation',
-      image: 'https://images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGFnZW5jeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODB8MA&ixlib=rb-4.1.0&q=85',
+      images: [
+        'https://images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwzfHxjcmVhdGl2ZSUyMGFnZW5jeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODB8MA&ixlib=rb-4.1.0&q=85',
+        'https://images.unsplash.com/photo-1516961642265-531546e84af2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxwaG90b2dyYXBoeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODZ8MA&ixlib=rb-4.1.0&q=85',
+        'https://images.unsplash.com/photo-1495121553079-4c61bcce1894?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxwaG90b2dyYXBoeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODZ8MA&ixlib=rb-4.1.0&q=85'
+      ],
       description: 'Creative event photography and documentation'
     },
     {
@@ -83,7 +92,7 @@ const CreativaLanding = () => {
       id: 6,
       category: 'editing',
       title: 'Motion Graphics',
-      image: 'https://images.unsplash.com/photo-1495121553079-4c61bcce1894?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxwaG90b2dyYXBoeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE3NTk1OTQyODZ8MA&ixlib=rb-4.1.0&q=85',
+      image: 'https://images.unsplash.com/photo-1495121553079-4c61bcce1894?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxwaG90b2dyYXBoeXxlbnwwfHx8YmxhY2tfYW5kX3doaXRlfDE7NTk1OTQyODZ8MA&ixlib=rb-4.1.0&q=85',
       description: 'Advanced motion graphics and animation'
     }
   ];
